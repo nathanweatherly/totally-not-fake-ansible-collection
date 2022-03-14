@@ -1,7 +1,7 @@
 ---
 # Create a hello-world.txt file
-- name: Create a tomcat directory
+- name: Create a hello-world.txt file
   copy:
-    dest: "/hello-world.txt"
+    dest: "/tmp/hello-world.txt"
     content: |
       Hello, World!
