@@ -1,7 +1,4 @@
 ---
-# Create a hello-world.txt file
-- name: Create a hello-world.txt file
-  copy:
-    dest: "/tmp/hello-world.txt"
-    content: |
-      Hello, World!
+- name: Print Hello World
+  ansible.builtin.debug:
+    msg: Hello, World!
