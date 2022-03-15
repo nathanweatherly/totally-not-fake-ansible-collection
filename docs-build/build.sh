@@ -10,7 +10,7 @@ antsibull-docs collection \
     --squash-hierarchy \
     --skip-indexes \
     --dest-dir temp-rst \
-    nathanweatherly.totall_not_fake
+    nathanweatherly.totally_not_fake
 
 # Copy collection documentation into source directory
 # rsync -cprv --delete-after temp-rst/ rst/
