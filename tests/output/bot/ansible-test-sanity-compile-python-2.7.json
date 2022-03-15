@@ -1,0 +1,10 @@
+{
+    "docs": "https://docs.ansible.com/ansible/2.11/dev_guide/testing/sanity/compile.html", 
+    "results": [
+        {
+            "message": "The test `ansible-test sanity --test compile --python 2.7` [[explain](https://docs.ansible.com/ansible/2.11/dev_guide/testing/sanity/compile.html)] failed with 1 error:", 
+            "output": "plugins/modules/hello_world.py:53:26: SyntaxError: def execute_module(module: AnsibleModule):"
+        }
+    ], 
+    "verified": false
+}

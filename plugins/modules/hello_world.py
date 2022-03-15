@@ -46,6 +46,8 @@ full_greeting:
   type: str
 '''
 
+import traceback
+
 from ansible.module_utils.basic import AnsibleModule
 
 def execute_module(module: AnsibleModule):

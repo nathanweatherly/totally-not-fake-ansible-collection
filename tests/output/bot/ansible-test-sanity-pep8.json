@@ -1,0 +1,10 @@
+{
+    "docs": "https://docs.ansible.com/ansible/2.11/dev_guide/testing/sanity/pep8.html", 
+    "results": [
+        {
+            "message": "The test `ansible-test sanity --test pep8` [[explain](https://docs.ansible.com/ansible/2.11/dev_guide/testing/sanity/pep8.html)] failed with 3 errors:", 
+            "output": "plugins/modules/hello_world.py:53:1: E302: expected 2 blank lines, found 1\nplugins/modules/hello_world.py:58:1: E302: expected 2 blank lines, found 1\nplugins/modules/hello_world.py:72:11: W292: no newline at end of file"
+        }
+    ], 
+    "verified": false
+}
