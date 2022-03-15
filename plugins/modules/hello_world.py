@@ -35,7 +35,7 @@ EXAMPLES = r'''
   register: full_greeting
 
 - name: "Say hello to World"
-  nathanweatherly.totally_not_fake.hello_world
+  nathanweatherly.totally_not_fake.hello_world:
   register: full_greeting
 '''
 
