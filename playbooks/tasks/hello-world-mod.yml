@@ -1,0 +1,31 @@
+- name: "Saying hi to everyone"
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: "Greeting the Earth"
+    nathanweatherly.totally_not_fake.hello_world:
+    register: full_greeting
+  - name: debug
+    debug:
+      msg: "{{ full_greeting }}"
+  - name: "Greeting Adele"
+    nathanweatherly.totally_not_fake.hello_world:
+      greeting_target: "from the other side"
+    register: full_greeting
+  - name: debug
+    debug:
+      msg: "{{ full_greeting }}"
+  - name: "Greeting Simon & Garfunkel"
+    nathanweatherly.totally_not_fake.hello_world:
+      greeting_target: "darkness my old friend"
+    register: full_greeting
+  - name: debug
+    debug:
+      msg: "{{ full_greeting }}"
+  - name: "Greeting Lionel Richie"
+    nathanweatherly.totally_not_fake.hello_world:
+      greeting_target: "is it me you're looking for"
+    register: full_greeting
+  - name: debug
+    debug:
+      msg: "{{ full_greeting }}"
