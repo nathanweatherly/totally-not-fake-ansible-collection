@@ -50,10 +50,12 @@ import traceback
 
 from ansible.module_utils.basic import AnsibleModule
 
+
 def execute_module(module: AnsibleModule):
     greeting_target = module.params['greeting_target']
-    full_greeting = "Hello {}!".format(greeting_target)
+    full_greeting = "Hello {0}!".format(greeting_target)
     module.exit_json(changed=True, full_greeting=full_greeting)
+
 
 def main():
     argument_spec = dict(
