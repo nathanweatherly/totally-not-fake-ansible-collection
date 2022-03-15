@@ -1,4 +1,0 @@
-- name: Hello world playbook
-  hosts: localhost
-  roles:
-    - hello_world
