@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Set collection version
         run: |
-          "COLLECTION_VERSION=$(make get-version)" >> $GITHUB_ENV
+          echo "COLLECTION_VERSION=$(make get-version)" >> $GITHUB_ENV
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
