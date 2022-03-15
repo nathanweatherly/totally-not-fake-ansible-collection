@@ -7,3 +7,6 @@ run-mod:
 	cp ./playbooks/tasks/hello-world-mod.yml .
 	ansible-playbook ./playbooks/tasks/hello-world-mod.yml
 	rm ./hello-world-mod.yml
+
+get-version:
+	@cat ./galaxy.yml | grep 'version: ' | cut -d ' ' -f 2

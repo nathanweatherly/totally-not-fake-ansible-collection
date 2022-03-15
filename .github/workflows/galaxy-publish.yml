@@ -1,10 +1,5 @@
-name: Galaxy Publish Check
+name: Galaxy Publish
 on:
-  # Run publish check against all pushes (direct commits, also merged PRs), Pull Requests
-  push:
-    branches: [ main, release-* ]
-  pull_request:
-    branches: [ main, release-* ]
   # manual trigger
   workflow_dispatch:
 
@@ -14,7 +9,7 @@ env:
 
 jobs:
   check_publish:
-    name: Check Galaxy Publish
+    name: Publish to Galaxy
     strategy:
       matrix:
         ansible:
@@ -38,3 +33,6 @@ jobs:
         run: ansible-galaxy collection build
       - name: Run galaxy-importer
         run: python -m galaxy_importer.main ${{env.NAMESPACE}}-${{env.COLLECTION_NAME}}-${{env.COLLECTION_VERSION}}.tar.gz
+      - name: Publish to Galaxy
+        run: ansible-galaxy collection publish ${{env.NAMESPACE}}-${{env.COLLECTION_NAME}}-${{env.COLLECTION_VERSION}}.tar.gz --token ${{ secrets.GALAXY_API_KEY }}
+      
