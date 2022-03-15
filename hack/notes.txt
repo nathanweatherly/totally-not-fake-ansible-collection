@@ -1,0 +1,4 @@
+To view module doc:
+```
+ansible-doc nathanweatherly.totally_not_fake.hello_world
+```
