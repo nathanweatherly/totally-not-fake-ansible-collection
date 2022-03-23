@@ -1,0 +1,31 @@
+- name: "Saying bye to everyone"
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: "Goodbye to the Earth"
+    nathanweatherly.totally_not_fake.goodbye_world:
+    register: full_goodbye
+  - name: debug
+    debug:
+      msg: "{{ full_goodbye }}"
+  - name: "Goodbye Cow"
+    nathanweatherly.totally_not_fake.goodbye_world:
+      goodbye_target: "cow jumping over the moon"
+    register: full_goodbye
+  - name: debug
+    debug:
+      msg: "{{ full_goodbye }}"
+  - name: "Goodbye Mush"
+    nathanweatherly.totally_not_fake.goodbye_world:
+      goodbye_target: "mush"
+    register: full_goodbye
+  - name: debug
+    debug:
+      msg: "{{ full_goodbye }}"
+  - name: "Goodbye LOL"
+    nathanweatherly.totally_not_fake.goodbye_world:
+      goodbye_target: "little old lady whispering hush"
+    register: full_goodbye
+  - name: debug
+    debug:
+      msg: "{{ full_goodbye }}"

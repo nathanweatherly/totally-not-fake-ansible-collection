@@ -5,18 +5,18 @@ __metaclass__ = type
 
 DOCUMENTATION = r'''
 
-module: hello_world
+module: goodbye_world
 
-short_description: hello world
+short_description: goodbye world
 
 author:
 - "Nathan Weatherly (@nathanweatherly)"
 
 description:
-- Says hello to greeting_target, returning a full greeting string.
+- Says goodbye to goodbye_target, returning a full greeting string.
 
 options:
-    greeting_target:
+    goodbye_target:
         description:
         - This field is the name to greet.
         - It is a string.
@@ -28,19 +28,19 @@ options:
 '''
 
 EXAMPLES = r'''
-- name: "Say hello to program"
-  nathanweatherly.totally_not_fake.hello_world:
-    greeting_target: Program
-  register: full_greeting
+- name: "Say goodbye to program"
+  nathanweatherly.totally_not_fake.goodbye_world:
+    goodbye_target: Program
+  register: full_goodbye
 
-- name: "Say hello to World"
-  nathanweatherly.totally_not_fake.hello_world:
-  register: full_greeting
+- name: "Say goodbye to World"
+  nathanweatherly.totally_not_fake.goodbye_world:
+  register: full_goodbye
 '''
 
 RETURN = r'''
-full_greeting:
-  description: Full greeting to greeting_target
+full_goodbye:
+  description: Full parting to goodbye_target
   returned: success
   type: str
 '''
@@ -51,14 +51,14 @@ from ansible.module_utils.basic import AnsibleModule
 
 
 def execute_module(module: AnsibleModule):
-    greeting_target = module.params['greeting_target']
-    full_greeting = "Hello {0}!".format(greeting_target)
-    module.exit_json(changed=True, full_greeting=full_greeting)
+    goodbye_target = module.params['goodbye_target']
+    full_goodbye = "Goodbye {0}!".format(goodbye_target)
+    module.exit_json(changed=True, full_goodbye=full_goodbye)
 
 
 def main():
     argument_spec = dict(
-        greeting_target=dict(type="str", default="world"),
+        goodbye_target=dict(type="str", default="world"),
     )
 
     module = AnsibleModule(

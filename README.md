@@ -30,4 +30,3 @@ BLURB
 
 <!-- Community links -->
 ## License
-
