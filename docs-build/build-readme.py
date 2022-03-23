@@ -10,23 +10,12 @@ import array
 import logging
         
 
-        # with open(filepath, 'r') as f:
-        #     resourceFile = yaml.safe_load(f)
-
-
-# 
-#     lines = file.readlines()
-
-# for line in lines:
-#     print ("line: {}".format(line))
-
-# no newlines or trailing spaces
-def readFileAsLines(filepath):
+def readFileAsLines(filepath, trim=True):
     lines = []
     with open(filepath, 'r') as file:
         for line in file:
-            cleanLine = line.strip()
-            if cleanLine == "":
+            cleanLine = line.strip() if trim else line.rstrip()
+            if trim and cleanLine == "":
                 continue
             lines.append(cleanLine)
     return lines
@@ -61,14 +50,33 @@ def grabAndCleanDescription(lines):
 def buildDocLink(urlBase, filepath):
     return "{}{}".format(urlBase, filepath)
 
+def buildReadmeTable(content):
+    table = ""
+    header = "Name | Description\n--- | ---\n"
+    table += header
+    for item in content:
+        print(item)
+        table += "[{}]({})| {}\n".format(item["name"], item["doclink"], item["description"])
+    return table
+
+def insertTableIntoReadme(readmePath, readmeTable):
+    fileAsLines = readFileAsLines(readmePath, False)
+    print(fileAsLines)
+    # just splice all entries before the before and after keys
+    # then rebuild string with readmeTable in the middle
+    # then write the file again
+    return None
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--docs-dir", dest="docsDir", type=str, help="Directory for docs")
     parser.add_argument("--url-base", dest="urlBase", type=str, help="Base URL for building doc link")
+    parser.add_argument("--readme-path", dest="readmePath", type=str, help="Path to README")
     
     args = parser.parse_args()
     docsDir = args.docsDir
     urlBase = args.urlBase
+    readmePath = args.readmePath
     content = []
     # tempRSTDir = os.path.join(os.path.dirname(os.path.realpath(__file__)),"temp-rst")
     for filename in os.listdir(docsDir):
@@ -86,7 +94,8 @@ def main():
             "description": description,
             "doclink": docLink
         })
-    print(content)
+    readmeTable = buildReadmeTable(content)
+    insertTableIntoReadme(readmePath, readmeTable)
 
 if __name__ == "__main__":
    main()

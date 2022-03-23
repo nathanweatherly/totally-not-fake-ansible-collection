@@ -19,5 +19,5 @@ get-version:
 build-docs:
 	./docs-build/build.sh
 	cp -f docs-build/temp-rst/* docs/
-	python3 ./docs-build/build-readme.py --docs-dir docs --url-base https://github.com/nathanweatherly/totally-not-fake-ansible-collection/blob/main/
+	python3 ./docs-build/build-readme.py --docs-dir docs --url-base https://github.com/nathanweatherly/totally-not-fake-ansible-collection/blob/main/ --readme-path README.md
 	git status

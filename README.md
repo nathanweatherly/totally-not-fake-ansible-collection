@@ -12,6 +12,7 @@ BLURB
 ## Included content
 
 <!--start collection content-->
+moomoomilk
 <!--end collection content-->
 
 ## Installation and Usage
