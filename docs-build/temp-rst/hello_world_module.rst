@@ -20,7 +20,7 @@ nathanweatherly.totally_not_fake.hello_world -- hello world
 .. Collection note
 
 .. note::
-    This plugin is part of the `nathanweatherly.totally_not_fake collection <https://galaxy.ansible.com/nathanweatherly/totally_not_fake>`_ (version 0.0.3-delta).
+    This plugin is part of the `nathanweatherly.totally_not_fake collection <https://galaxy.ansible.com/nathanweatherly/totally_not_fake>`_ (version 0.0.3-echo).
 
     To install it use: :code:`ansible-galaxy collection install nathanweatherly.totally_not_fake`.
 
