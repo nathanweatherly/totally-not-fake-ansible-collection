@@ -40,11 +40,8 @@ jobs:
       - name: Install collection
         run: ansible-galaxy collection install $(pwd)
 
-      - name: Run docs build
-        run: ./docs-build/build.sh
-
-      - name: Move rst files
-        run: tree docs-build && cp -f docs-build/temp-rst/* docs/ && tree docs && git status
+      - name: Run docs build, move rst files, and build README
+        run: make build-docs
 
       - name: Create Pull Request
         id: cpr
