@@ -5,7 +5,7 @@
 Nathanweatherly.Totally_Not_Fake
 ================================
 
-Collection version 0.0.3-charlie
+Collection version 0.0.3-delta
 
 .. toctree::
     :maxdepth: 1
@@ -19,6 +19,7 @@ These are the plugins in the nathanweatherly.totally_not_fake collection
 Modules
 ~~~~~~~
 
+* :ref:`goodbye_world <ansible_collections.nathanweatherly.totally_not_fake.goodbye_world_module>` -- goodbye world
 * :ref:`hello_world <ansible_collections.nathanweatherly.totally_not_fake.hello_world_module>` -- hello world
 
 

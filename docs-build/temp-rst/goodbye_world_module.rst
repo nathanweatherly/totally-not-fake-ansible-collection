@@ -4,7 +4,7 @@
 
 .. Anchors
 
-.. _ansible_collections.nathanweatherly.totally_not_fake.hello_world_module:
+.. _ansible_collections.nathanweatherly.totally_not_fake.goodbye_world_module:
 
 .. Anchors: short name for ansible.builtin
 
@@ -14,8 +14,8 @@
 
 .. Title
 
-nathanweatherly.totally_not_fake.hello_world -- hello world
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nathanweatherly.totally_not_fake.goodbye_world -- goodbye world
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. Collection note
 
@@ -24,7 +24,7 @@ nathanweatherly.totally_not_fake.hello_world -- hello world
 
     To install it use: :code:`ansible-galaxy collection install nathanweatherly.totally_not_fake`.
 
-    To use it in a playbook, specify: :code:`nathanweatherly.totally_not_fake.hello_world`.
+    To use it in a playbook, specify: :code:`nathanweatherly.totally_not_fake.goodbye_world`.
 
 .. version_added
 
@@ -41,7 +41,7 @@ Synopsis
 
 .. Description
 
-- Says hello to greeting_target, returning a full greeting string.
+- Says goodbye to goodbye_target, returning a full greeting string.
 
 
 .. Aliases
@@ -65,9 +65,9 @@ Parameters
         </tr>
                     <tr>
                                                                 <td colspan="1">
-                    <div class="ansibleOptionAnchor" id="parameter-greeting_target"></div>
-                    <b>greeting_target</b>
-                    <a class="ansibleOptionLink" href="#parameter-greeting_target" title="Permalink to this option"></a>
+                    <div class="ansibleOptionAnchor" id="parameter-goodbye_target"></div>
+                    <b>goodbye_target</b>
+                    <a class="ansibleOptionLink" href="#parameter-goodbye_target" title="Permalink to this option"></a>
                     <div style="font-size: small">
                         <span style="color: purple">string</span>
                                                                     </div>
@@ -99,14 +99,14 @@ Examples
 .. code-block:: yaml+jinja
 
     
-    - name: "Say hello to program"
-      nathanweatherly.totally_not_fake.hello_world:
-        greeting_target: Program
-      register: full_greeting
+    - name: "Say goodbye to program"
+      nathanweatherly.totally_not_fake.goodbye_world:
+        goodbye_target: Program
+      register: full_goodbye
 
-    - name: "Say hello to World"
-      nathanweatherly.totally_not_fake.hello_world:
-      register: full_greeting
+    - name: "Say goodbye to World"
+      nathanweatherly.totally_not_fake.goodbye_world:
+      register: full_goodbye
 
 
 
@@ -130,16 +130,16 @@ Common return values are documented :ref:`here <common_return_values>`, the foll
         </tr>
                     <tr>
                                 <td colspan="1">
-                    <div class="ansibleOptionAnchor" id="return-full_greeting"></div>
-                    <b>full_greeting</b>
-                    <a class="ansibleOptionLink" href="#return-full_greeting" title="Permalink to this return value"></a>
+                    <div class="ansibleOptionAnchor" id="return-full_goodbye"></div>
+                    <b>full_goodbye</b>
+                    <a class="ansibleOptionLink" href="#return-full_goodbye" title="Permalink to this return value"></a>
                     <div style="font-size: small">
                       <span style="color: purple">string</span>
                                           </div>
                                     </td>
                 <td>success</td>
                 <td>
-                                            <div>Full greeting to greeting_target</div>
+                                            <div>Full parting to goodbye_target</div>
                                         <br/>
                                     </td>
             </tr>
