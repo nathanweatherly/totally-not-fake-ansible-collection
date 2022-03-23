@@ -60,9 +60,26 @@ def buildReadmeTable(content):
     return table
 
 def insertTableIntoReadme(readmePath, readmeTable):
-    fileAsLines = readFileAsLines(readmePath, False)
-    print(fileAsLines)
+    lines = readFileAsLines(readmePath, False)
+    print(lines)
     # just splice all entries before the before and after keys
+    startKey = "<!--start collection content-->"
+    endKey = "<!--end collection content-->"
+    if startKey not in lines or endKey not in lines:
+        return ""
+    startIndex = lines.index(startKey)
+    endIndex = lines.index(endKey)
+    if startIndex >= endIndex:
+        return
+    start = lines[:startIndex+1]
+    end = lines[endIndex:]
+    resultLines = start + [readmeTable.strip()] + end
+    resultStr = "\n".join(resultLines)
+    print(resultStr)
+    a_file = open(readmePath, "w")
+    a_file.write(resultStr)
+    a_file.close()
+
     # then rebuild string with readmeTable in the middle
     # then write the file again
     return None
