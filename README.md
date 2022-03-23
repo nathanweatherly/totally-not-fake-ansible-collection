@@ -11,8 +11,8 @@ BLURB
 
 ## Included content
 
-<!-- Looks like RST here -->
-<!-- Instead of this, Ansible references Content tab (which does seem pretty clean) -->
+<!--start collection content-->
+<!--end collection content-->
 
 ## Installation and Usage
 

@@ -8,7 +8,6 @@ mkdir -p temp-rst
 antsibull-docs collection \
     --use-current \
     --squash-hierarchy \
-    --skip-indexes \
     --dest-dir temp-rst \
     nathanweatherly.totally_not_fake
 
