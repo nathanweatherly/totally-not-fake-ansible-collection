@@ -12,7 +12,10 @@ BLURB
 ## Included content
 
 <!--start collection content-->
-moomoomilk
+Name | Description
+--- | ---
+[nathanweatherly.totally_not_fake.hello_world](https://github.com/nathanweatherly/totally-not-fake-ansible-collection/blob/main/docs/hello_world_module.rst)| Says hello to greeting_target, returning a full greeting string.
+[nathanweatherly.totally_not_fake.goodbye_world](https://github.com/nathanweatherly/totally-not-fake-ansible-collection/blob/main/docs/goodbye_world_module.rst)| Says goodbye to goodbye_target, returning a full greeting string.
 <!--end collection content-->
 
 ## Installation and Usage
