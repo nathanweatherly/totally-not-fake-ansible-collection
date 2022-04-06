@@ -28,7 +28,7 @@ Name | Description
 
 ## Release Notes
 
-<!-- We should include a changelog -->
+See the [changelog](CHANGELOG.rst).
 
 ## More information
 
