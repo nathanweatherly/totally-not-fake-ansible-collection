@@ -1,0 +1,27 @@
+objects:
+  role: {}
+plugins:
+  become: {}
+  cache: {}
+  callback: {}
+  cliconf: {}
+  connection: {}
+  httpapi: {}
+  inventory: {}
+  lookup: {}
+  module:
+    goodbye_world:
+      description: goodbye world
+      name: goodbye_world
+      namespace: ''
+      version_added: null
+    hello_world:
+      description: hello world
+      name: hello_world
+      namespace: ''
+      version_added: null
+  netconf: {}
+  shell: {}
+  strategy: {}
+  vars: {}
+version: 0.0.1
