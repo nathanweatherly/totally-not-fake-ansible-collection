@@ -28,7 +28,7 @@ Name | Description
 
 ## Release Notes
 
-See the [changelog](CHANGELOG.rst).
+See the [changelog](https://github.com/nathanweatherly/totally-not-fake-ansible-collection/blob/main/CHANGELOG.rst).
 
 ## More information
 
