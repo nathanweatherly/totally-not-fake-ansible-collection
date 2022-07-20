@@ -5,7 +5,7 @@
 Nathanweatherly.Totally_Not_Fake
 ================================
 
-Collection version 0.0.3-foxtrot
+Collection version 0.0.3
 
 .. toctree::
     :maxdepth: 1
